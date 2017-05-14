@@ -1,7 +1,7 @@
 import sys
- 
+
 import pygame
- 
+
 pygame.init()
 columns, rows = 50, 50
 cell_size = 10
