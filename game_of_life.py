@@ -46,13 +46,15 @@ cell_size = 10
 size = width, height = columns * cell_size, rows * cell_size
 screen = pygame.display.set_mode(size)
 cells = get_cells()
+clock = pygame.time.Clock()
 
 while True:
+    clock.tick(2)
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             sys.exit()
 
     draw_cells()
+    evolve()
     draw_grid()
-
     pygame.display.update()
